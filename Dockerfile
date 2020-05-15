@@ -28,12 +28,3 @@ RUN sdkmanager --sdk_root=${ANDROID_HOME} --update
 
 RUN while read -r package; do PACKAGES="${PACKAGES}${package} "; done < /sdk/packages.txt && sdkmanager --sdk_root=${ANDROID_HOME} ${PACKAGES}
 RUN yes | sdkmanager --sdk_root=${ANDROID_HOME} --licenses
-
-# sonar scanner for code quality
-ENV SONAR_SCANNER_VERSION 4.3.0.2102
-RUN apk add --no-cache wget && \ 
-    curl -L -O  https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip && \ 
-    ls -lh && \ 
-    unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION} && \ 
-    cd /usr/bin && ln -s /sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner sonar-scanner && \ 
-    ln -s /usr/bin/sonar-scanner-run.sh /bin/gitlab-sonar-scanner 
