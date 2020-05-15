@@ -9,4 +9,3 @@ platform-tools
 platforms;android-27
 platforms;android-28
 platforms;android-29
-platforms;android-30
