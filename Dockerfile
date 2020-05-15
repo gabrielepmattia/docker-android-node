@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:full
+FROM ringcentral/jdk:8
 LABEL maintainer="Gabriele Proietti Mattia <pm.gabriele@outlook.com>"
 
 ENV VERSION_CMD_LINE_TOOLS "6200805"
