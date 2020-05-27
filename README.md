@@ -7,7 +7,7 @@ This Docker image contains the Android SDK, NodeJS+NPM and the most common packa
 A `.gitlab-ci.yml` with caching of your project's dependencies would look like this:
 
 ```
-image: gabrielepmattia/android-node
+image: gabrielepmattia/android-node:latest
 
 stages:
 - build
@@ -32,4 +32,4 @@ build:
 
 ## Credits
 
-- [Preventis](https://github.com/Preventis) for the original docker android image
+- [Preventis](https://github.com/Preventis) for the [original docker android image](https://github.com/Preventis/docker-android-alpine)
