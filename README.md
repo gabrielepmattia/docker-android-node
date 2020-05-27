@@ -1,13 +1,13 @@
 # docker-android-node
 
-[gabrielepmattia/docker-android-alpine:latest](https://hub.docker.com/r/gabrielepmattia/docker-android-node)
+[gabrielepmattia/android-node:latest](https://hub.docker.com/r/gabrielepmattia/android-node)
 
 This Docker image contains the Android SDK, NodeJS+NPM and the most common packages necessary for building Android Apps (also based on, for example, React Native) in a CI tool like GitLab CI. Make sure your CI environment's caching works as expected, this greatly improves the build time, especially if you use multiple build jobs.
 
 A `.gitlab-ci.yml` with caching of your project's dependencies would look like this:
 
 ```
-image: gabrielepmattia/docker-android-node
+image: gabrielepmattia/android-node
 
 stages:
 - build
