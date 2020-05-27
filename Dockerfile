@@ -7,7 +7,7 @@ ENV ANDROID_HOME "/sdk"
 ENV PATH "$PATH:${ANDROID_HOME}/tools/bin"
 
 RUN apk update
-RUN apk add --no-cache bash bzip2 curl unzip git
+RUN apk add --no-cache --update bash bzip2 curl unzip git nodejs npm
 
 RUN curl -s https://dl.google.com/android/repository/commandlinetools-linux-${VERSION_CMD_LINE_TOOLS}_latest.zip > /sdk.zip
 RUN unzip /sdk.zip -d /sdk
